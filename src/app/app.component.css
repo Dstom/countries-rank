@@ -1,0 +1,30 @@
+img {
+    width: 100%;
+}
+
+
+
+@media screen and (min-width: 800px) {
+    header {
+        max-width: var(--section-width);
+        margin: auto;
+    }
+}
+
+.title {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.title span {
+    color: var(--check-color);
+}
+
+.hero {
+    position: relative;
+}

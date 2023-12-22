@@ -1,0 +1,58 @@
+
+<section>
+    <header class="header">
+        <h1>Found {{sortedCountries().length}} countries</h1>
+        <input type="text" class="search-input" [(ngModel)]="searchFilter"
+            placeholder="Search by Nanme, Region, Subregion" />
+    </header>
+
+    <aside class="aside">
+        <h6>Sort by</h6>
+        <select [(ngModel)]="selectedOption">
+            <option *ngFor="let option of sortByLabels" [selected]="true" [ngValue]="option">
+                {{ option.name }}
+            </option>
+        </select>
+        <h6>Region</h6>
+        <ul>
+            @for (item of regions ; track $index) {
+            <li (click)="setRegionCheckBoxValue(item.label)" [class.active]="item.isChecked">{{item.label}}</li>
+            }
+        </ul>
+
+        <h6>Status</h6>
+        <label class="container-check" (click)="setUnMemberCheck()">Members of the United Nations
+            <span class="checkmark" [class.status-checked]="unMemberCheck"></span>
+        </label>
+
+        <label class="container-check" (click)="setIndenpendentCheck()">Independent
+            <span class="checkmark" [class.status-checked]="independentCheck"></span>
+        </label>
+
+    </aside>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Flag</th>
+                    <th>Name</th>
+                    <th>Population</th>
+                    <th>Area (km^2)</th>
+                    <th>Region</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (country of sortedCountries(); track $index) {
+                <tr (click)="goCountries(country.name.common)">
+                    <td> <img src={{country.flags.png}} class="flag-image" alt={{country.flags.alt}} />
+                    </td>
+                    <td>{{country.name.common}}</td>
+                    <td>{{country.population | number}}</td>
+                    <td>{{country.area}}</td>
+                    <td>{{country.region}}</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </main>
+</section>

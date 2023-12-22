@@ -1,0 +1,45 @@
+<ng-template #loading>
+    <div>
+        Loading...
+    </div>
+</ng-template>
+
+<section *ngIf="country; else loading">
+    <div class="header-img">
+        <img src={{country.flags.svg}} alt={{country.flags.alt}} />
+    </div>
+    <h1>{{country.name.common}}</h1>
+    <span>{{country.name.official}}</span>
+    <div class="population-area-group">
+        <div class="item-group">Population<span></span> {{country.population | number}}</div>
+        <div class="item-group">Area (Km^2)<span></span> {{country.area | number}}</div>
+    </div>
+    <div class="country-details">
+        <p><span>Capital</span>{{country.capital.join(', ')}}</p>
+    </div>
+    <div class="country-details">
+        <p><span>Subregin</span>{{country.subregion}}</p>
+    </div>
+    <div class="country-details">
+        <p><span>Language</span>{{ getLanguages()}}</p>
+    </div>
+    <div class="country-details">
+        <p><span>Curriencies</span>{{getCurrencies()}}</p>
+    </div>
+    <div class="country-details">
+        <p><span>Continents</span>{{country.continents.join(', ')}}</p>
+    </div>
+    <div class="neighbouring-countries">
+        <p>Neighbouring Countries</p>
+        <ul class="neighbor-list">
+            @for (item of neighbouringCountries; track $index) {
+            <li>
+                <img src={{item.flags.svg}} alt={{item.flags.alt}} />
+                <span>{{item.name.common}}</span>
+            </li>
+            }
+        </ul>
+
+
+    </div>
+</section>

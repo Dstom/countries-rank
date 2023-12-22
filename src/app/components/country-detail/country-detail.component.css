@@ -1,0 +1,125 @@
+section {
+    width: 100%;
+    color: var(--text-color);
+    padding: 10px 0;
+    text-align: center;
+    border: 1px solid var(--mid-grey-color);
+}
+
+section .header-img {
+    position: relative;
+    height: auto;
+    width: 100%;
+    height: 100px;
+}
+
+section .header-img img {
+    position: absolute;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    width: 200px;
+}
+
+.population-area-group {
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    border-bottom: 1px solid var(--light-grey-color);
+    flex-direction: column;
+    align-items: center;
+}
+
+.population-area-group .item-group {
+    display: flex;
+    padding: 15px 20px;
+    background: var(--mid-grey-color);
+    border-radius: 10px;
+    align-items: center;
+}
+
+.population-area-group .item-group span {
+    position: relative;
+    width: 50px;
+}
+
+.population-area-group .item-group span::after {
+    content: "";
+    background-color: black;
+    width: 1px;
+    height: 30px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+
+
+@media screen and (min-width: 800px) {
+    section {
+        width: var(--country-details-width);
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .population-area-group {
+        flex-direction: row;
+        padding: 15px 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        border-bottom: 1px solid var(--light-grey-color);
+    }
+}
+
+.country-details {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--light-grey-color);
+}
+
+.country-details>p {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15px;
+    align-items: center;
+    text-align: right;
+    text-wrap: balance;
+}
+
+.country-details>p>span {
+    color: var(--light-grey-color);
+}
+
+.neighbouring-countries {
+    text-align: start;
+    padding: 15px;
+
+}
+
+.neighbouring-countries>p {
+    color: var(--light-grey-color);
+}
+
+.neighbor-list {
+    display: flex;
+    gap: 10px;
+    list-style-type: none;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.neighbor-list>li {
+    width: 80px;
+}
+
+.neighbor-list>li img {
+    width: 75px;
+    border-radius: 5px;
+}
+
+.neighbor-list>li span {
+    font-size: 12px;
+}
