@@ -23,8 +23,8 @@ export class CountryComponent {
   ];
   selectedOption: SortInterface = this.sortByLabels[0];
   initCountries: Country[] = [];
-  unMemberCheck: boolean = false;
-  independentCheck: boolean = false;
+  unMemberCheck: boolean = true;
+  independentCheck: boolean = true;
 
   searchFilter = '';
 
