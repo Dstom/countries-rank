@@ -1,27 +1,15 @@
 # CountriesApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.5.
+### About this repository
 
-## Development server
+This repository is a solution for Countries Rank (DevChallenges.io).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Its developed with Angular.
 
-## Code scaffolding
+You can see the project deployed [here](https://dstom.github.io/countries-rank/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### What is DevChallenges🤔?
 
-## Build
+[DevChallenges](https://devchallenges.io/challenges) is a website created by [Thu Nghiem](https://twitter.com/thunghiemdinh). The site contains different projects with different levels of difficulty so you can pick one that works best for you. Each project is different and will test you different aspects of coding, projects contain basic files that are needed for you to start as well as a beautiful design file that you are trying to recreate.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[DevChallenges](https://devchallenges.io/challenges) website also includes [Challenge Paths](https://devchallenges.io/paths), at the moment there are three
