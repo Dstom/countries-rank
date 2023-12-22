@@ -43,7 +43,7 @@
             </thead>
             <tbody>
                 @for (country of sortedCountries(); track $index) {
-                <tr (click)="goCountries(country.name.common)">
+                <tr (click)="goCountries(country.name.official)">
                     <td> <img src={{country.flags.png}} class="flag-image" alt={{country.flags.alt}} />
                     </td>
                     <td>{{country.name.common}}</td>
